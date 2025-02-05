@@ -12,13 +12,14 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
-      <version>5.9.0</version>
+      <version>5.9.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.9.0</version>
+      <version>5.9.2</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -31,7 +32,6 @@
   <build>
     <plugins>
       <plugin>
-        <!-- Build an executable JAR -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <configuration>
@@ -58,6 +58,16 @@
         </executions>
         <configuration>
           <mainClass>org.campus02.mabombo.Main</mainClass>
+        </configuration>
+      </plugin>
+
+      <!-- Surefire Plugin für JUnit 5 Tests -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <useModulePath>false</useModulePath>
         </configuration>
       </plugin>
     </plugins>
