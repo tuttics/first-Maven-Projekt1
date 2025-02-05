@@ -2,6 +2,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class BMICalculatorTest {
 
     @Test
@@ -22,8 +23,8 @@ public class BMICalculatorTest {
 
     @Test
     public void testCalculateBMICategory() {
-        BMICalculator bmiCalc1 = new BMICalculator("Lukas", "Beispiel", 180, 120, 'm');
-        BMICalculator bmiCalc2 = new BMICalculator("Lisa", "Test", 170, 70, 'w');
+        BMICalculator bmiCalc1 = new BMICalculator("Enoch", "Mabombo", 180, 120, 'm');
+        BMICalculator bmiCalc2 = new BMICalculator("MAria", "Mbsuri", 170, 70, 'w');
 
         assertEquals(2, bmiCalc1.calculateBMICategory()); // männlich
         assertEquals(1, bmiCalc2.calculateBMICategory()); // weiblich
